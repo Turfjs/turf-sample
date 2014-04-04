@@ -1,0 +1,32 @@
+{
+  "name": "turf-sample",
+  "version": "0.1.0",
+  "description": "turf sample module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/morganherlocker/turf-sample.git"
+  },
+  "keywords": [
+    "geojson",
+    "stats",
+    "sample",
+    "turf"
+  ],
+  "author": "morganherlocker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/morganherlocker/turf-sample/issues"
+  },
+  "homepage": "https://github.com/morganherlocker/turf-sample",
+  "devDependencies": {
+    "tape": "^2.12.2",
+    "turf-point": "^0.1.0"
+  },
+  "dependencies": {
+    "turf-featurecollection": "^0.1.0"
+  }
+}

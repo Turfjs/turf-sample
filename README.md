@@ -4,6 +4,27 @@ turf-sample
 
 Takes a feature collection and returns N random features as a feature collection.
 
+###Install
+
+```sh
+npm install turf-sample
+```
+
+###Parameters
+
+|name|description|
+|---|---|
+|fc|a FeatureCollection|
+|num|number of features to sample|
+
+###Usage
+
+```js
+sample(fc, num)
+```
+
+###Example
+
 ```js
 var sample = require('turf-sample')
 var fs = require('fs')

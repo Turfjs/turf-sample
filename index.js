@@ -10,15 +10,18 @@ var featureCollection = require('turf-featurecollection');
  * @param {number} n number of features to select
  * @return {FeatureCollection} output
  * @example
- * var pts = JSON.parse(fs.readFileSync('/path/to/pts.geojson'))
- * var num = 10
- * var sampled = turf.sample(pts, num)
- * console.log(sampled)
+ * // create a lot of points
+ * var points = turf.random('points', 1000);
+ * //=points
+ *
+ * // sample just a few of them
+ * var sample = turf.sample(points, 10);
+ * //=sample
  */
 module.exports = function(fc, num){
   var outFC = featureCollection(getRandomSubarray(fc.features, num));
   return outFC;
-}
+};
 
 function getRandomSubarray(arr, size) {
   var shuffled = arr.slice(0), i = arr.length, min = i - size, temp, index;

@@ -1,38 +1,47 @@
-turf-sample
-===========
-[![Build Status](https://travis-ci.org/Turfjs/turf-sample.svg)](https://travis-ci.org/Turfjs/turf-sample)
+# turf-sample
 
-Takes a feature collection and returns N random features as a feature collection.
+[![build status](https://secure.travis-ci.org/Turfjs/turf-sample.png)](http://travis-ci.org/Turfjs/turf-sample)
 
-###Install
+turf sample module
+
+
+### `turf.sample(features, n)`
+
+Selects a given number of Feature|features from a FeatureCollection
+at random.
+
+
+### Parameters
+
+| parameter  | type              | description                  |
+| ---------- | ----------------- | ---------------------------- |
+| `features` | FeatureCollection |                              |
+| `n`        | number            | number of features to select |
+
+
+### Example
+
+```js
+// create a lot of points
+var points = turf.random('points', 1000);
+//=points
+
+// sample just a few of them
+var sample = turf.sample(points, 10);
+//=sample
+```
+
+## Installation
+
+Requires [nodejs](http://nodejs.org/).
 
 ```sh
-npm install turf-sample
+$ npm install turf-sample
 ```
 
-###Parameters
+## Tests
 
-|name|description|
-|---|---|
-|fc|a FeatureCollection|
-|num|number of features to sample|
-
-###Usage
-
-```js
-sample(fc, num)
+```sh
+$ npm test
 ```
 
-###Example
-
-```js
-var sample = require('turf-sample')
-var fs = require('fs')
-
-var pts = JSON.parse(fs.readFileSync('/path/to/pts.geojson'))
-var num = 10
-
-var sampled = sample(pts, num)
-
-console.log(sampled)
-```

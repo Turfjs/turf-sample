@@ -2,20 +2,19 @@
 var featureCollection = require('turf-featurecollection');
 
 /**
- * Selects a given number of {@link Feature|features} from a {@link FeatureCollection}
- * at random.
+ * Takes a {@link FeatureCollection} and returns a FeatureCollection with given number of {@link Feature|features} at random.
  *
  * @module turf/sample
- * @param {FeatureCollection} features
+ * @param {FeatureCollection} features a FeatureCollection of any type
  * @param {number} n number of features to select
- * @return {FeatureCollection} output
+ * @return {FeatureCollection} a FeatureCollection with `n` features
  * @example
- * // create a lot of points
  * var points = turf.random('points', 1000);
+ *
  * //=points
  *
- * // sample just a few of them
  * var sample = turf.sample(points, 10);
+ *
  * //=sample
  */
 module.exports = function(fc, num){

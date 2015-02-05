@@ -5,6 +5,7 @@ var featureCollection = require('turf-featurecollection');
  * Takes a {@link FeatureCollection} and returns a FeatureCollection with given number of {@link Feature|features} at random.
  *
  * @module turf/sample
+ * @category data
  * @param {FeatureCollection} features a FeatureCollection of any type
  * @param {number} n number of features to select
  * @return {FeatureCollection} a FeatureCollection with `n` features

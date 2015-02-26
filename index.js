@@ -6,9 +6,9 @@ var featureCollection = require('turf-featurecollection');
  *
  * @module turf/sample
  * @category data
- * @param {FeatureCollection<(Point|LineString|Polygon)>} features a FeatureCollection of any type
+ * @param {FeatureCollection} features set of input features
  * @param {Number} n number of features to select
- * @return {FeatureCollection<(Point|LineString|Polygon)>} a FeatureCollection with `n` features
+ * @return {FeatureCollection} a FeatureCollection with `n` features
  * @example
  * var points = turf.random('points', 1000);
  *

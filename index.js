@@ -18,7 +18,7 @@ var featureCollection = require('turf-featurecollection');
  *
  * //=sample
  */
-module.exports = function(fc, num){
+module.exports = function(fc, num) {
   var outFC = featureCollection(getRandomSubarray(fc.features, num));
   return outFC;
 };
